@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf,org">
+<head>
+    <meta charset="UTF-8">
+    <title>Products</title>
+</head>
+<body>
+<div th:include="base"></div>
+<div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+    <header class="mb-auto">
+        <div>
+            <h3 class="float-md-start mb-0">Codela</h3>
+            <nav class="nav nav-masthead justify-content-center float-md-end">
+                <a class="nav-link fw-bold py-1 px-3 active" aria-current="page" href="/index">Home </a>
+                <a class="nav-link fw-bold py-1 px-3" href="/products">Products </a>
+                <a class="nav-link fw-bold py-1 px-3" href="/logout">Logout</a>
+            </nav>
+        </div>
+    </header>
+    <div class="container">
+        <main class="px-3">
+            <h1>Products</h1>
+            <h2>View products</h2>
+            <table>
+                <tr>
+                    <th>PRODUCT NAME</th>
+                    <th>PRODUCT PRICE</th>
+                </tr>
+                <tr th:each="p: ${products}">
+                    <td th:text="${p.name}"></td>
+                    <td th:text="${p.price}"></td>
+                </tr>
+            </table>
+            <h2>Add a product</h2>
+            <form action="/products" method="post">
+                <div class="row mt-2" style="width: 400px;">
+                    <div class="col">
+                        Name: <input
+                            type="text" class="form-control"
+                            name="name"><br/>
+                    </div>
+                </div>
+                <div class="row mt-1" style="width: 400px;">
+                    <div class="col">
+                        Price: <input
+                            type="text" class="form-control"
+                            step="any"
+                            name="price"><br/>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary">Add product</button>
+            </form>
+        </main>
+    </div>
+</body>
+</html>

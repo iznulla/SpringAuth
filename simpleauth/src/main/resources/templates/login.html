@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+</head>
+<body>
+<div th:include="base"></div>
+<div class="container mt-5">
+    <h1>Log In</h1>
+    <form action="/" method="post">
+        <div class="row mt-5" style="width: 400px;">
+            <div class="col">
+                <input type="text" class="form-control" name="username" placeholder="First name">
+            </div>
+        </div>
+        <div class="row" style="width: 400px;">
+            <div class="col mt-3">
+                <input type="password" class="form-control" name="password" placeholder="Password">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col mt-3">
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+        </div>
+    </form>
+    <div class="sign mt-3">
+        <a href="/signup">Sign Up</a>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="container mt-5">
+<div th:include="base"></div>
+<h1>Sign Up</h1>
+<form action="/signup" method="post">
+    <div class="row mt-5" style="width: 400px;">
+        <div class="col">
+            <input type="text" class="form-control" name="username" placeholder="First name" aria-label="First name">
+        </div>
+    </div>
+    <div class="row" style="width: 400px;">
+        <div class="col mt-3">
+            <input type="password" class="form-control" name="password" placeholder="Password" aria-label="Password">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col mt-3">
+            <button type="submit" class="btn btn-primary">Sign Up</button>
+        </div>
+    </div>
+</form>
+</div>
+</body>
+</html>
