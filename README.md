@@ -11,7 +11,7 @@ simple auth with Spring
 - **controllers/:**  Пакет, включающий контроллеры приложения, такие как LoginController, SignUpController, MainController, и ProductController.
 - **processors/:** Пакет, содержащий классы-процессоры, например, LoginProcessor, которые выполняют дополнительную обработку данных или запросов.
 - **services/:** Пакет, включающий сервисы, такие как UserService, ProductService, и LoggingManagementService, отвечающие за бизнес-логику приложения.
-- **aspects/:**  Пакет с аспектами, например, IsLoginAspect, которые применяются к методам с использованием аннотации @IsLogin.
+- **aspects/:**  Пакет с аспектами, например, IsLoginAspect, которые применяются к методам доступ к которым хотим закрыть с использованием аннотации @IsLogin.
 - **annotations/:** Пакет, содержащий аннотацию @IsLogin, которая указывает на использование аспекта IsLoginAspect.
 
 ## Заключение
